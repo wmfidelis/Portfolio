@@ -2,10 +2,6 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import PersonalDetails, Education, WorkExperience, Skill, Project
-from .serializers import (
-    PersonalDetailsSerializer, EducationSerializer, WorkExperienceSerializer,
-    SkillSerializer, ProjectSerializer,
-)
 from .forms import PersonalDetailsForm, EducationForm, WorkExperienceForm, SkillForm, ProjectForm
 
 
