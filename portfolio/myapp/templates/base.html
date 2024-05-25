@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'personal_details_list' %}">Personal Details</a></li>
+                <li><a href="{% url 'education_list' %}">Education</a></li>
+                <li><a href="{% url 'work_experience_list' %}">Work Experience</a></li>
+                <li><a href="{% url 'skill_list' %}">Skills</a></li>
+                <li><a href="{% url 'project_list' %}">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Portfolio</p>
+    </footer>
+</body>
+</html>

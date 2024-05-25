@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Work Experience List</h2>
+<ul>
+    {% for experience in work_experience_list %}
+        <li>{{ experience.company }} - <a href="{% url 'work_experience_update' experience.pk %}">Edit</a> - <a href="{% url 'work_experience_delete' experience.pk %}">Delete</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'work_experience_create' %}">Add new work experience</a>
+{% endblock %}
