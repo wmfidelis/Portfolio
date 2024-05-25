@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Education List</h2>
+<ul>
+    {% for education in education_list %}
+        <li>{{ education.degree }} - <a href="{% url 'education_update' education.pk %}">Edit</a> - <a href="{% url 'education_delete' education.pk %}">Delete</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'education_create' %}">Add new education</a>
+{% endblock %}

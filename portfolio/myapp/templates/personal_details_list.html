@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Personal Details List</h2>
+<ul>
+    {% for detail in personal_details_list %}
+        <li>{{ detail.full_name }} - <a href="{% url 'personal_details_update' detail.pk %}">Edit</a> - <a href="{% url 'personal_details_delete' detail.pk %}">Delete</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'personal_details_create' %}">Add new personal detail</a>
+{% endblock %}
